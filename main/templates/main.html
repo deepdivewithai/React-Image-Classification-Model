@@ -1,0 +1,11 @@
+{% extends "base.html" %} {% block title %} upload now {% endblock title %} 
+{% block content %}
+<div class="container">
+  <form action="upload/" method="post" class="dropzone" id="my-great-dropzone">
+    {% csrf_token %}
+    <div class="fallback">
+      <input name="file" type="file" />
+    </div>
+  </form>
+</div>
+{% endblock content %}
